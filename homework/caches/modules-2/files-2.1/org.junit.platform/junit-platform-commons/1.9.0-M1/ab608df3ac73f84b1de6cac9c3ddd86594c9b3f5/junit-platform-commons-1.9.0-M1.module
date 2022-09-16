@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.junit.platform",
+    "module": "junit-platform-commons",
+    "version": "1.9.0-M1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.junit",
+          "module": "junit-bom",
+          "version": {
+            "requires": "5.9.0-M1"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "junit-platform-commons-1.9.0-M1.jar",
+          "url": "junit-platform-commons-1.9.0-M1.jar",
+          "size": 100526,
+          "sha512": "ced36f082de7ec723f4a5493957cb4531897eda9d24471fc16144b820ac9a3f924835565a933b078b743c9981be744cf244fc02f06e67cf4a9ab624cccd41730",
+          "sha256": "15e9c881cb1f29914f0e8ca249f516dcddb83d371f429e7d8f248d9adb94b82f",
+          "sha1": "de236464ded934f146a064f33e069f690b120afc",
+          "md5": "27b29847c73baa7ce6fd970d105b19cc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.junit",
+          "module": "junit-bom",
+          "version": {
+            "requires": "5.9.0-M1"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        }
+      ],
+      "files": [
+        {
+          "name": "junit-platform-commons-1.9.0-M1.jar",
+          "url": "junit-platform-commons-1.9.0-M1.jar",
+          "size": 100526,
+          "sha512": "ced36f082de7ec723f4a5493957cb4531897eda9d24471fc16144b820ac9a3f924835565a933b078b743c9981be744cf244fc02f06e67cf4a9ab624cccd41730",
+          "sha256": "15e9c881cb1f29914f0e8ca249f516dcddb83d371f429e7d8f248d9adb94b82f",
+          "sha1": "de236464ded934f146a064f33e069f690b120afc",
+          "md5": "27b29847c73baa7ce6fd970d105b19cc"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "junit-platform-commons-1.9.0-M1-javadoc.jar",
+          "url": "junit-platform-commons-1.9.0-M1-javadoc.jar",
+          "size": 352626,
+          "sha512": "d4d90a07b046ece4fa933f3ecb16df81333cb1a68204439d112f6eae442295196fb997a15836ab5b18e0c3c6302399d084ead9e9cee6dc3317c629e297be3a08",
+          "sha256": "45a6df1fa5a6b7a2df56939074f5f8d45a08161158c67cafaa88fcc14375a827",
+          "sha1": "5451552cc8b6de549a7ac5668ffa3f704f4865eb",
+          "md5": "a53c2b4bcbc598170dd87697abe9980b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "junit-platform-commons-1.9.0-M1-sources.jar",
+          "url": "junit-platform-commons-1.9.0-M1-sources.jar",
+          "size": 75335,
+          "sha512": "b3e5df6a69d2a6fb3a22e3d4c41b7def64d356cf267c4ed98bfecf5df952f1b7c075a8b7ca53e487f628dcbc3da707bb501e903526e14110f69243c8d08135a1",
+          "sha256": "4a4bf6ae1342aeac48dec8fe4ef399e6f7383c8d4741d0798186c382ae8ded87",
+          "sha1": "543989d7473c67d08e8871d110b423b882521777",
+          "md5": "2b2d88060c1dc4fbdd7e685e379cd996"
+        }
+      ]
+    }
+  ]
+}

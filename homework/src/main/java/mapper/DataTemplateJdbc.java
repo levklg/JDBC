@@ -23,16 +23,19 @@ public class DataTemplateJdbc<T> implements DataTemplate<T> {
 
     @Override
     public Optional<T> findById(Connection connection, long id) {
+
         throw new UnsupportedOperationException();
     }
 
     @Override
     public List<T> findAll(Connection connection) {
+
         throw new UnsupportedOperationException();
     }
 
     @Override
     public long insert(Connection connection, T client) {
+
         throw new UnsupportedOperationException();
     }
 

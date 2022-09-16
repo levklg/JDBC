@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 
 
 import javax.sql.DataSource;
+import java.lang.reflect.Field;
+import java.util.List;
 
 
 public class HomeWork {
@@ -32,8 +34,14 @@ public class HomeWork {
         var dbExecutor = new DbExecutorImpl();
 
 // Работа с клиентом
-        EntityClassMetaData entityClassMetaDataClient; // = new EntityClassMetaDataImpl();
-        EntitySQLMetaData entitySQLMetaDataClient = null; //= new EntitySQLMetaDataImpl(entityClassMetaDataClient);
+        Client client = new Client();
+        client.setId(12L);
+        client.setName("Lev");
+
+
+        EntityClassMetaData entityClassMetaDataClient = new EntityClassMetaDataImpl(client);
+       entityClassMetaDataClient.getAllFields();
+        EntitySQLMetaData entitySQLMetaDataClient =  new EntitySQLMetaDataImpl(entityClassMetaDataClient);
         var dataTemplateClient = new DataTemplateJdbc<Client>(dbExecutor, entitySQLMetaDataClient); //реализация DataTemplate, универсальная
 
 // Код дальше должен остаться

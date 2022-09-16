@@ -1,0 +1,171 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.junit.jupiter",
+    "module": "junit-jupiter-params",
+    "version": "5.9.0-M1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.junit",
+          "module": "junit-bom",
+          "version": {
+            "requires": "5.9.0-M1"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.9.0-M1"
+          }
+        },
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "junit-jupiter-params-5.9.0-M1.jar",
+          "url": "junit-jupiter-params-5.9.0-M1.jar",
+          "size": 578257,
+          "sha512": "fa64951e3b70378ca5069e1ba75c0e3c825adb8fd94c85d18b01db4d5163abdb9035edb6c10e0d8900fc046281316efa3137980e6447eab8fd6e0d3e80c16b74",
+          "sha256": "4ec9188fada053a694e5ebef94452bc04fdb8591c2d2fd543dc2126c3c6f05b0",
+          "sha1": "4012aed461acd8f24797e5ff4002f7e5ad8ac236",
+          "md5": "19180a09bed2b9348f6c125d2493514e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.junit",
+          "module": "junit-bom",
+          "version": {
+            "requires": "5.9.0-M1"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.9.0-M1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "junit-jupiter-params-5.9.0-M1.jar",
+          "url": "junit-jupiter-params-5.9.0-M1.jar",
+          "size": 578257,
+          "sha512": "fa64951e3b70378ca5069e1ba75c0e3c825adb8fd94c85d18b01db4d5163abdb9035edb6c10e0d8900fc046281316efa3137980e6447eab8fd6e0d3e80c16b74",
+          "sha256": "4ec9188fada053a694e5ebef94452bc04fdb8591c2d2fd543dc2126c3c6f05b0",
+          "sha1": "4012aed461acd8f24797e5ff4002f7e5ad8ac236",
+          "md5": "19180a09bed2b9348f6c125d2493514e"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "junit-jupiter-params-5.9.0-M1-javadoc.jar",
+          "url": "junit-jupiter-params-5.9.0-M1-javadoc.jar",
+          "size": 300022,
+          "sha512": "cff8b0013f5dbda1a16c3b43d37ba19748b230e494d0e80701a57f93086a7a77471d40208c70b23951b2e45aa800aea9b9059315368c671b9478fe7401c57ecc",
+          "sha256": "20a367d755ec3c9de79db6804c83fe0743c78e06392807072ed7be42808a2787",
+          "sha1": "be6508f0b474c10ae267038b74386accd0d61dc1",
+          "md5": "c78a34aaba24acfe464f69c55d87ee2a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "junit-jupiter-params-5.9.0-M1-sources.jar",
+          "url": "junit-jupiter-params-5.9.0-M1-sources.jar",
+          "size": 72493,
+          "sha512": "63c7136ca0b5141538565e7a0cae34b4bc16a4869f3951b16dcb78c72342d2490cc01bd2e62fff6148833dc990426b681b126f92701bcd310c7074e6b7c5e6ae",
+          "sha256": "b59474e01657eaef84da987db0938dad63ea894c9ee9edba4af16b79526c381a",
+          "sha1": "49fadc1df37458d81c805f442153b12655d761f7",
+          "md5": "cfb253ab3ee702ab629c389b16d4b87a"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "junit-jupiter-params-5.9.0-M1.jar",
+          "url": "junit-jupiter-params-5.9.0-M1.jar",
+          "size": 578257,
+          "sha512": "fa64951e3b70378ca5069e1ba75c0e3c825adb8fd94c85d18b01db4d5163abdb9035edb6c10e0d8900fc046281316efa3137980e6447eab8fd6e0d3e80c16b74",
+          "sha256": "4ec9188fada053a694e5ebef94452bc04fdb8591c2d2fd543dc2126c3c6f05b0",
+          "sha1": "4012aed461acd8f24797e5ff4002f7e5ad8ac236",
+          "md5": "19180a09bed2b9348f6c125d2493514e"
+        }
+      ]
+    }
+  ]
+}
