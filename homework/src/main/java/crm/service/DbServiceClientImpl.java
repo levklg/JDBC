@@ -23,9 +23,12 @@ public class DbServiceClientImpl implements DBServiceClient {
 
     @Override
     public Client saveClient(Client client) {
+        dataTemplate.setObject(client);
         return transactionRunner.doInTransaction(connection -> {
             if (client.getId() == null) {
+
                 var clientId = dataTemplate.insert(connection, client);
+                client.setId(clientId);
                 var createdClient = new Client(clientId, client.getName());
                 log.info("created client: {}", createdClient);
                 return createdClient;

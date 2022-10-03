@@ -68,4 +68,9 @@ public class ClientDataTemplateJdbc implements DataTemplate<Client> {
             throw new DataTemplateException(e);
         }
     }
+
+    @Override
+    public void setObject(Object object) {
+
+    }
 }

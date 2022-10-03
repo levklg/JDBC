@@ -1,3 +1,5 @@
+import crm.model.Client;
+import crm.model.Id;
 import mapper.EntityClassMetaData;
 import org.flywaydb.core.api.logging.Log;
 
@@ -8,24 +10,29 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EntityClassMetaDataImpl<T> implements EntityClassMetaData {
-   private Object object;
+   private Class<?> clazz;
+   private  Object object;
 
 
-    public EntityClassMetaDataImpl(Object object) {
-        this.object = object.getClass();
+    public EntityClassMetaDataImpl() {
+
 
     }
 
     @Override
     public String getName() {
-     return object.getClass().getName();
+     return clazz.getName();
     }
 
     @Override
     public Constructor getConstructor() {
 
-
         Constructor constructor = null;
+        try {
+            constructor  = clazz.getConstructor();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
 
         return  constructor;
     }
@@ -33,25 +40,54 @@ public class EntityClassMetaDataImpl<T> implements EntityClassMetaData {
     @Override
     public Field getIdField() {
 
-        return null;
+        Field[] fields =  clazz.getDeclaredFields();
+        Field fieldId = null;
+
+        for(Field field : fields) {
+           if(field.isAnnotationPresent(Id.class)){
+
+               fieldId = field;
+            }
+        }
+        return fieldId;
     }
 
     @Override
     public List<Field> getAllFields() {
 
-        Field[] fields=  this.object.getClass().getDeclaredFields();
-        Method[] methods = this.object.getClass().getMethods();
-      for(Field f : fields){
-          System.out.println(f.getName());
-      }
-
+        Field[] fields=  clazz.getDeclaredFields();
         List<Field> fieldList =  Arrays.stream(fields).toList();
-       return  fieldList;
+        return  fieldList;
 
     }
 
     @Override
     public List<Field> getFieldsWithoutId() {
-        return null;
+        Field[] fields =  clazz.getDeclaredFields();
+        List<Field> fieldListWithoutId = new ArrayList<>();
+
+        for(Field field : fields) {
+            if(!field.isAnnotationPresent(Id.class)){
+               fieldListWithoutId.add(field);
+            }
+        }
+        return fieldListWithoutId;
     }
+
+   public Class<?> getClazz(){
+        return this.clazz;
+   }
+   public Object getObject(){
+        return this.object;
+   }
+
+
+   public void setClazz(Class<?> clazz){
+        this.clazz = clazz;
+   }
+
+   public void setObject(Object object){
+        this.object = object;
+   }
+
 }

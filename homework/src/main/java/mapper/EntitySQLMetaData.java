@@ -11,4 +11,8 @@ public interface EntitySQLMetaData {
     String getInsertSql();
 
     String getUpdateSql();
+
+    void setObject(Object object);
+    Object getObject();
+
 }
